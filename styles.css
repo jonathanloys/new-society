@@ -239,9 +239,27 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: var(--color-midnight);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(10, 17, 40, 0.16);
+  border: 1.5px solid rgba(200, 138, 88, 0.4);
+  background: var(--color-midnight);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.brand-link:hover .brand-emblem {
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(200, 138, 88, 0.35);
+}
+
+.brand-emblem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .brand-text {
@@ -661,8 +679,14 @@ ul {
 }
 
 .section-header {
-  max-width: 820px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: clamp(3rem, 5vw, 4.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-label {
@@ -673,6 +697,7 @@ ul {
   letter-spacing: 0.16em;
   color: var(--accent-copper);
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .section-label-light {
@@ -683,6 +708,7 @@ ul {
   letter-spacing: 0.16em;
   color: var(--accent-copper);
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .section-title {
@@ -692,6 +718,8 @@ ul {
   line-height: 1.2;
   color: var(--color-midnight);
   margin-bottom: 1.25rem;
+  text-align: center;
+  width: 100%;
 }
 
 .text-white .section-title {
@@ -702,9 +730,10 @@ ul {
   font-size: 1.125rem;
   line-height: 1.7;
   color: var(--color-stone);
-  max-width: 680px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .section-intro-light {
@@ -715,6 +744,7 @@ ul {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .divider-accent {
@@ -722,6 +752,8 @@ ul {
   height: 3px;
   background: var(--accent-copper);
   margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: var(--radius-pill);
 }
 
@@ -1449,6 +1481,14 @@ ul {
   line-height: 1.7;
   color: var(--color-stone);
   margin-bottom: 2.5rem;
+}
+
+.participation-options-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-midnight);
+  margin-bottom: 1.25rem;
 }
 
 .participation-options {
